@@ -1,4 +1,8 @@
 #!/bin/bash
+if [[ $# -ne 2 ]] ; then
+	echo "Usage: ./script.sh [user of the VM to connect to] [SSH port of the VM]";
+	exit
+fi
 deploy="mini-script.sh"
 echo '#!/bin/bash' > $deploy
 echo 'cd /var/www/html' >> $deploy
