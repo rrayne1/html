@@ -7,6 +7,7 @@ deploy="mini-script.sh"
 echo '#!/bin/bash' > $deploy
 echo 'cd /var/www/html' >> $deploy
 echo 'if ! [ -d .git ] ; then' >> $deploy
+echo 'cd ..' >> $deploy
 echo 'sudo rm -rf ../html' >> $deploy
 echo 'sudo git clone https://github.com/rrayne1/html.git html' >> $deploy
 echo 'else' >>$deploy
